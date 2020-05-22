@@ -1,4 +1,196 @@
 
+## 打包
+
+打包成 Linux 命令
+```
+bee pack -be GOOS=linux 
+```
+
+打包成 Windows 命令 
+```
+bee pack -be GOOS=windows
+```
+
+## 使用
+### 安装中文字体（非必须，但是建议安装）
+有的Linux服务器并没有支持中文字体，需要手动安装。 地址：http://www.hc-cms.com/thread-41-1-1.html
+
+安装命令：
+```
+sudo apt install ttf-wqy-zenhei
+sudo apt install fonts-wqy-microhei
+```
+
+### 安装Chrome
+直接使用命令一键安装：
+
+```
+yum install chromium
+```
+
+执行以下命令，如果能打印百度页面代码，则表示安装成功。
+
+```
+chromium-browser --headless --disable-gpu --dump-dom --no-sandbox https://www.baidu.com
+```
+
+安装chrome，是为了兼容以前的问题，并且自动安装puppeteer的一些chrome浏览器依赖。
+
+### 安装puppeteer
+这个主要用于在发布文档的时候，渲染未被渲染的markdown文档、渲染自定义封面、以及强力模式下的网页采集。
+```
+yum install nodejs npm
+npm install -g n
+n stable
+npm install -g cnpm
+cnpm install puppeteer
+```
+
+### 安装calibre
+calibre官网：https://www.calibre-ebook.com/
+
+安装命令：
+```
+wget -nv -O- https://download.calibre-ebook.com/linux-installer.py | python3 -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()"
+```
+执行下面命令，能看到版本号，表示安装成功。
+```
+ebook-convert --version
+```
+
+注意：
+
+这里要安装最新版的calibre，执行上述命令，安装的就是最新版的了。
+如果出现warning的提示，直接不用理会即可;error级别的提示，网上搜下看下如何解决
+calibre主要用于将文档导出生成pdf、epub、mobi文档。
+
+本人已经使用Go语言对calibre导出pdf、epub、mobi文档进行了一层封装，欢迎大家给个star ==》https://github.com/xiaonian0430/converter
+
+测试：随便创建一个txt文件
+```
+echo "Hello xiaonian。你好，阿休。" > test.txt
+```
+
+转成pdf
+
+```
+ebook-convert test.txt test.pdf
+```
+查看测试的转化效果，主要看下转化的过程中有没有报错，以及转化后的文档有没有出现中文乱码。
+
+### 配置文件在conf目录
+app.conf
+
+oss.conf
+
+oauth.conf
+
+### 部署打包的软件
+
+执行数据库安装。程序安装一些站点配置项、SEO项等:
+```
+./BookStack install
+```
+
+启动：
+```
+./BookStack
+```
+
+### Nginx反向代理配置参考：
+```
+
+server
+{
+    listen 80;
+    server_name demo.bookstack.cn;
+    index index.php index.html index.htm default.php default.htm default.html;
+    root /www/wwwroot/demo.bookstack.cn;
+    location / 
+    {
+        proxy_pass http://localhost:8100;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header REMOTE-HOST $remote_addr;
+        #缓存相关配置
+        #proxy_cache cache_one;
+        #proxy_cache_key $host$request_uri$is_args$args;
+        #proxy_cache_valid 200 304 301 302 1h;
+        #持久化连接相关配置
+        #proxy_connect_timeout 30s;
+        #proxy_read_timeout 86400s;
+        #proxy_send_timeout 30s;
+        #proxy_http_version 1.1;
+        #proxy_set_header Upgrade $http_upgrade;
+        #proxy_set_header Connection "upgrade";
+    }
+    location ~ .*\.(php|jsp|cgi|asp|aspx|flv|swf|xml)?$
+    {
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header REMOTE-HOST $remote_addr;
+        proxy_pass http://localhost:8181;
+    }
+    #PROXY-END
+    include enable-php-54.conf;
+    #PHP-INFO-END
+    #REWRITE-START URL重写规则引用,修改后将导致面板设置的伪静态规则失效
+    include /www/server/panel/vhost/rewrite/demo.bookstack.cn.conf;
+    #REWRITE-END
+    #禁止访问的文件或目录
+    location ~ ^/(\.user.ini|\.htaccess|\.git|\.svn|\.project|LICENSE|README.md)
+    {
+        return 404;
+    }
+    access_log  off;
+}
+```
+
+### 加入系统守护进行
+
+1、进入supervisor的配置目录
+```
+cd /etc/supervisor/conf.d/
+```
+
+2、配置守护进程 创建bookstack.conf文件，并配置。
+```
+[program:BookStack]
+directory = 你的程序目录
+command =你的程序执行命令
+autostart = true
+autorestart=true
+user = 启动该程序的用户
+redirect_stderr = true
+stdout_logfile = 日志地址
+```
+配置示例：
+```
+[program:BookStack]
+directory = /www/wwwroot/demo.bookstack.cn
+command =/www/wwwroot/demo.bookstack.cn/BookStack
+autostart = true
+autorestart=true
+user = root
+redirect_stderr = true
+stdout_logfile = /var/log/supervisor/BookStack.log
+```
+
+配置完成之后，重启supervisor
+```
+supervisorctl reload
+```
+
+默认管理员账号和密码
+
+admin admin  或者 admin admin888
+
+
+
+
+
 **BookStack 配套手机APP `BookChatApp` 开源地址**
 
 - Gitee: https://gitee.com/truthhun/BookChatApp
