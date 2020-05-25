@@ -12,7 +12,7 @@ bee pack -be GOOS=windows
 ```
 
 ## 使用
-### 安装中文字体（非必须，但是建议安装）
+### 01.安装中文字体（非必须，但是建议安装）
 有的Linux服务器并没有支持中文字体，需要手动安装。 地址：http://www.hc-cms.com/thread-41-1-1.html
 
 安装命令：
@@ -21,7 +21,7 @@ sudo apt install ttf-wqy-zenhei
 sudo apt install fonts-wqy-microhei
 ```
 
-### 安装Chrome
+### 02.安装Chrome
 直接使用命令一键安装：
 
 ```
@@ -36,7 +36,7 @@ chromium-browser --headless --disable-gpu --dump-dom --no-sandbox https://www.ba
 
 安装chrome，是为了兼容以前的问题，并且自动安装puppeteer的一些chrome浏览器依赖。
 
-### 安装puppeteer
+### 03.安装puppeteer
 这个主要用于在发布文档的时候，渲染未被渲染的markdown文档、渲染自定义封面、以及强力模式下的网页采集。
 ```
 yum install nodejs npm
@@ -46,7 +46,7 @@ npm install -g cnpm
 cnpm install puppeteer
 ```
 
-### 安装calibre
+### 04.安装calibre
 calibre官网：https://www.calibre-ebook.com/
 
 安装命令：
@@ -78,14 +78,14 @@ ebook-convert test.txt test.pdf
 ```
 查看测试的转化效果，主要看下转化的过程中有没有报错，以及转化后的文档有没有出现中文乱码。
 
-### 配置文件在conf目录
+### 05.配置文件在conf目录
 app.conf
 
 oss.conf
 
 oauth.conf
 
-### 部署打包的软件
+### 06.部署打包的软件
 
 执行数据库安装。程序安装一些站点配置项、SEO项等:
 ```
@@ -97,7 +97,7 @@ oauth.conf
 ./BookStack
 ```
 
-### Nginx反向代理配置参考：
+### 07.Nginx反向代理配置参考：
 ```
 
 server
@@ -131,7 +131,7 @@ server
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header REMOTE-HOST $remote_addr;
-        proxy_pass http://localhost:8181;
+        proxy_pass http://localhost:8100;
     }
     #PROXY-END
     include enable-php-54.conf;
@@ -148,14 +148,15 @@ server
 }
 ```
 
-### 加入系统守护进行
+### 08.加入系统守护进行
 
 1、进入supervisor的配置目录
 ```
+yum install -y supervisor
 cd /etc/supervisor/conf.d/
 ```
 
-2、配置守护进程 创建bookstack.conf文件，并配置。
+2、配置守护进程 创建bookstack.ini文件，并配置。
 ```
 [program:BookStack]
 directory = 你的程序目录
@@ -169,8 +170,8 @@ stdout_logfile = 日志地址
 配置示例：
 ```
 [program:BookStack]
-directory = /www/wwwroot/demo.bookstack.cn
-command =/www/wwwroot/demo.bookstack.cn/BookStack
+directory = /home/BookStack2
+command =/home/BookStack2/BookStack2
 autostart = true
 autorestart=true
 user = root
@@ -180,8 +181,38 @@ stdout_logfile = /var/log/supervisor/BookStack.log
 
 配置完成之后，重启supervisor
 ```
+# 启动
+supervisord -c /etc/supervisord.conf
+
+# 重启
 supervisorctl reload
+
+# 查看进程
+supervisorctl status
+
+# 启动某个进程
+supervisorctl start BookStack
+
+# 停止某个进程
+supervisorctl stop BookStack
+
+# 重启某个进程
+supervisorctl restart BookStack
+
+
+# error: <class 'socket.error'>, [Errno 2] No such file or directory: file: /usr/lib64/python2.7/socket.py line: 224
+
+解决办法：
+这个可能有多种原因，可能是已经启动过了也可能是没权限，解决步骤如下：
+1. 先要确认是否已经启动过了：’ps -ef | grep supervisord’
+2. 如果有的话先kill掉
+3. 运行下面命令：
+sudo touch /var/run/supervisor.sock
+sudo chmod 777 /var/run/supervisor.sock
+
+4. 再尝试重新启动：supervisord -c /etc/supervisord.conf(如果没有文件找个别人的配置拷贝过来或者运行echo_supervisord_conf > /etc/supervisord.conf)
 ```
+
 
 默认管理员账号和密码
 
@@ -193,8 +224,7 @@ admin admin  或者 admin admin888
 
 **BookStack 配套手机APP `BookChatApp` 开源地址**
 
-- Gitee: https://gitee.com/truthhun/BookChatApp
-- GitHub: https://github.com/TruthHun/BookChatApp
+- GitHub: https://github.com/xiaonian0430/BookChatApp
 
 **BookChatApp下载体验地址**
 
@@ -249,8 +279,7 @@ BookStack是基于[Mindoc](https://github.com/lifei6671/mindoc)开发的，为�
 其中肯定还是有不足的地方，大家在使用的过程中，遇到问题，欢迎反馈。
 
 源码托管：
-- Github: https://github.com/TruthHun/BookStack
-- Gitee: https://gitee.com/truthhun/BookStack
+- Gitee: https://gitee.com/xiaonian0430/BookStack
 
 <a name="qqgroup"></a>
 ## QQ交流群
