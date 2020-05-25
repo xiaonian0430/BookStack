@@ -16,6 +16,7 @@ func bookChatRouters() {
 	if beego.AppConfig.DefaultBool("allowCors", true) {
 		beego.InsertFilter(prefix+"/*", beego.BeforeRouter, cors.Allow(&cors.Options{
 			AllowAllOrigins: true,
+			AllowHeaders:    []string{"Origin", "Accept", "Content-Type", "Authorization", "x-version"},
 			AllowMethods:    []string{"PUT", "POST", "OPTIONS", "GET", "DELETE"},
 		}))
 	}
