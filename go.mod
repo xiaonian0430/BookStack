@@ -1,4 +1,4 @@
-module github.com/TruthHun/BookStack
+module github.com/xiaonian0430/BookStack
 
 go 1.13
 
