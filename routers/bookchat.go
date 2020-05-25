@@ -5,8 +5,7 @@ import (
 
 	"github.com/astaxie/beego/plugins/cors"
 
-	"BookStack/controllers/api"
-
+	"github.com/TruthHun/BookStack/controllers/api"
 	"github.com/astaxie/beego"
 )
 
