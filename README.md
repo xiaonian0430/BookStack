@@ -170,8 +170,8 @@ stdout_logfile = 日志地址
 配置示例：
 ```
 [program:BookStack]
-directory = /home/BookStack2
-command =/home/BookStack2/BookStack2
+directory = /home/BookStack
+command =/home/BookStack/BookStack
 autostart = true
 autorestart=true
 user = root
