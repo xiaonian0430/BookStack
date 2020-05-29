@@ -175,7 +175,7 @@ server
 1、进入supervisor的配置目录
 ```
 yum install -y supervisor
-cd /etc/supervisor/conf.d/
+cd /etc/supervisord.d
 ```
 
 2、配置守护进程 创建 shareknow.ini文件，并配置。
