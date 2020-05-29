@@ -26,13 +26,12 @@ require (
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/shiena/ansicolor v0.0.0-20151119151921-a422bbe96644 // indirect
 	github.com/unknwon/com v1.0.1
-	github.com/xiaonian0430/converter v1.0.1
-	github.com/xiaonian0430/gotil v1.0.3
-	github.com/xiaonian0430/html2article v1.0.1
-	github.com/xiaonian0430/html2json v1.0.2
+	github.com/xiaonian0430/converter v1.0.3
+	github.com/xiaonian0430/gotil v1.0.4
+	github.com/xiaonian0430/html2article v1.0.3
+	github.com/xiaonian0430/html2json v1.0.3
 	golang.org/x/sys v0.0.0-20200523222454-059865788121 // indirect
 	golang.org/x/time v0.0.0-20200416051211-89c76fbcd5d1 // indirect
 	gopkg.in/asn1-ber.v1 v1.0.0-20181015200546-f715ec2f112d // indirect
 	gopkg.in/ldap.v2 v2.5.1
-	gopkg.in/yaml.v2 v2.3.0 // indirect
 )
