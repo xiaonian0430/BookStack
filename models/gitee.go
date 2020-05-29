@@ -1,7 +1,8 @@
 package models
 
 import (
-	"BookStack/oauth"
+	"ShareKnow/oauth"
+
 	"github.com/astaxie/beego/orm"
 )
 

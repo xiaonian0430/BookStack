@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"BookStack/utils"
+	"ShareKnow/utils"
 
 	"github.com/PuerkitoBio/goquery"
 
@@ -17,10 +17,10 @@ import (
 
 	"fmt"
 
-	"github.com/xiaonian0430/gotil/util"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/httplib"
 	"github.com/astaxie/beego/orm"
+	"github.com/xiaonian0430/gotil/util"
 )
 
 // 是否正在创建全量索引

@@ -5,12 +5,13 @@ import (
 
 	"github.com/astaxie/beego/plugins/cors"
 
-	"BookStack/controllers/api"
+	"ShareKnow/controllers/api"
+
 	"github.com/astaxie/beego"
 )
 
-func bookChatRouters() {
-	prefix := strings.TrimSpace(beego.AppConfig.DefaultString("apiPrefix", "/bookchat"))
+func apiRouters() {
+	prefix := strings.TrimSpace(beego.AppConfig.DefaultString("apiPrefix", "/shareknow"))
 	prefix = "/" + strings.Trim(prefix, "./")
 
 	if beego.AppConfig.DefaultBool("allowCors", true) {

@@ -7,7 +7,8 @@ import (
 	"net/http"
 	"os"
 
-	"BookStack/conf"
+	"ShareKnow/conf"
+
 	"github.com/astaxie/beego"
 )
 

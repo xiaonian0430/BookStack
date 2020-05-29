@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"BookStack/utils/html2md"
+	"ShareKnow/utils/html2md"
 
 	"image/png"
 
@@ -21,11 +21,11 @@ import (
 	"fmt"
 
 	"github.com/PuerkitoBio/goquery"
-	"BookStack/commands"
-	"BookStack/conf"
-	"BookStack/models"
-	"BookStack/models/store"
-	"BookStack/utils"
+	"ShareKnow/commands"
+	"ShareKnow/conf"
+	"ShareKnow/models"
+	"ShareKnow/models/store"
+	"ShareKnow/utils"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	"github.com/boombuler/barcode"

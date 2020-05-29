@@ -1,6 +1,6 @@
 package routers
 
 func init() {
-	bookChatRouters()
+	apiRouters()
 	webRouter()
 }

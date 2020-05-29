@@ -5,10 +5,10 @@ import (
 	"strings"
 	"time"
 
-	"BookStack/conf"
-	"BookStack/utils"
+	"ShareKnow/conf"
+	"ShareKnow/utils"
 
-	"BookStack/models"
+	"ShareKnow/models"
 	"github.com/astaxie/beego"
 )
 

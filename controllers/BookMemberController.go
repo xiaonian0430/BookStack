@@ -3,8 +3,8 @@ package controllers
 import (
 	"errors"
 
-	"BookStack/conf"
-	"BookStack/models"
+	"ShareKnow/conf"
+	"ShareKnow/models"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
 )

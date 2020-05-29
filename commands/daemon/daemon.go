@@ -4,10 +4,11 @@ import (
 	"fmt"
 	"os"
 
-	"BookStack/models"
+	"ShareKnow/models"
 
-	"BookStack/commands"
-	"BookStack/controllers"
+	"ShareKnow/commands"
+	"ShareKnow/controllers"
+
 	"github.com/astaxie/beego"
 	"github.com/kardianos/service"
 )

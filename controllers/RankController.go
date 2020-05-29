@@ -1,6 +1,6 @@
 package controllers
 
-import "BookStack/models"
+import "ShareKnow/models"
 
 type RankController struct {
 	BaseController

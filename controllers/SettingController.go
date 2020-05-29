@@ -7,15 +7,15 @@ import (
 	"strings"
 	"time"
 
-	"BookStack/graphics"
-	"BookStack/models/store"
+	"ShareKnow/graphics"
+	"ShareKnow/models/store"
 
 	"fmt"
 
-	"BookStack/commands"
-	"BookStack/conf"
-	"BookStack/models"
-	"BookStack/utils"
+	"ShareKnow/commands"
+	"ShareKnow/conf"
+	"ShareKnow/models"
+	"ShareKnow/utils"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"

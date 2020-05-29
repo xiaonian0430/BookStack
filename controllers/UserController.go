@@ -3,9 +3,9 @@ package controllers
 import (
 	"time"
 
-	"BookStack/conf"
-	"BookStack/models"
-	"BookStack/utils"
+	"ShareKnow/conf"
+	"ShareKnow/models"
+	"ShareKnow/utils"
 	"github.com/astaxie/beego"
 )
 

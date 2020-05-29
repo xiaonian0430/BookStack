@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"BookStack/models"
+	"ShareKnow/models"
 	"github.com/astaxie/beego"
 )
 

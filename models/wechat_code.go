@@ -6,9 +6,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"BookStack/models/store"
+	"ShareKnow/models/store"
 
-	"BookStack/utils"
+	"ShareKnow/utils"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 )

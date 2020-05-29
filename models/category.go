@@ -4,8 +4,8 @@ import (
 	"github.com/astaxie/beego"
 	"strings"
 
-	"BookStack/models/store"
-	"BookStack/utils"
+	"ShareKnow/models/store"
+	"ShareKnow/utils"
 
 	"errors"
 

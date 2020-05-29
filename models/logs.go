@@ -5,7 +5,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"BookStack/conf"
+	"ShareKnow/conf"
 	"github.com/astaxie/beego/orm"
 )
 

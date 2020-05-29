@@ -1,7 +1,7 @@
 package models
 
 import (
-	"BookStack/utils"
+	"ShareKnow/utils"
 	"strings"
 
 	"github.com/astaxie/beego"

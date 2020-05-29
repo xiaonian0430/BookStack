@@ -1,10 +1,11 @@
 package models
 
 import (
-	"BookStack/conf"
-	"github.com/astaxie/beego/orm"
+	"ShareKnow/conf"
 	"strings"
 	"sync"
+
+	"github.com/astaxie/beego/orm"
 )
 
 var optionCache sync.Map // map[int || string]*Option

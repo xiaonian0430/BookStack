@@ -10,8 +10,8 @@ import (
 
 	"github.com/astaxie/beego"
 
-	"BookStack/models/store"
-	"BookStack/utils"
+	"ShareKnow/models/store"
+	"ShareKnow/utils"
 )
 
 // 版本控制，文件存储于获取

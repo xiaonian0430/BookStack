@@ -3,7 +3,7 @@ package models
 import (
 	"strings"
 
-	"BookStack/utils"
+	"ShareKnow/utils"
 	"github.com/astaxie/beego/orm"
 )
 

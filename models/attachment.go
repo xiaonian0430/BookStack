@@ -7,8 +7,8 @@ import (
 
 	"strings"
 
-	"BookStack/conf"
-	"BookStack/utils"
+	"ShareKnow/conf"
+	"ShareKnow/utils"
 	"github.com/astaxie/beego/orm"
 )
 

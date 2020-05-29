@@ -19,9 +19,9 @@ import (
 	"errors"
 
 	"github.com/PuerkitoBio/goquery"
-	"BookStack/conf"
-	"BookStack/models/store"
-	"BookStack/utils"
+	"ShareKnow/conf"
+	"ShareKnow/models/store"
+	"ShareKnow/utils"
 	"github.com/xiaonian0430/converter/converter"
 	"github.com/xiaonian0430/gotil/cryptil"
 	"github.com/xiaonian0430/gotil/util"

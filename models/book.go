@@ -10,9 +10,9 @@ import (
 
 	"strconv"
 
-	"BookStack/conf"
-	"BookStack/models/store"
-	"BookStack/utils"
+	"ShareKnow/conf"
+	"ShareKnow/models/store"
+	"ShareKnow/utils"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"

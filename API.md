@@ -1,6 +1,6 @@
-# BookStack API
+# ShareKnow API
 
-BookStack 配套微信小程序 BookChat API。
+ShareKnow 配套 ShareKnowApp API。
 
 ## TODO
 
@@ -36,13 +36,13 @@ BookStack 配套微信小程序 BookChat API。
 
 ## 功能
 
-`BookChat` v2.0 微信小程序( https://gitee.com/truthhun/BookChat )已经发布了，需要配套 `BookStack` v2.0 以上版本的接口才能正常使用，
+`ShareKnowApp` v2.0 微信小程序( https://gitee.com/truthhun/ShareKnowApp )已经发布了，需要配套 `BookStack` v2.0 以上版本的接口才能正常使用，
 目前`BookStack`相关API已经开发完成，但是对API等的后台管理功能并未完善，
-快的话也需要大半个月时间这样，所以先放出Beta版本，以方便需要调试和对BookChat进行二次开发的朋友。
+快的话也需要大半个月时间这样，所以先放出Beta版本，以方便需要调试和对ShareKnowApp进行二次开发的朋友。
 
 ## 本次主要升级日志
 
-- [x] `BookStack` 配套微信小程序 `BookChat` API接口实现，累计20+个API接口
+- [x] `BookStack` 配套微信小程序 `ShareKnowApp` API接口实现，累计20+个API接口
 - [x] 修复删除项目时误删默认封面的bug
 - [x] HTML内容处理，以兼容微信小程序`rich-text`组件实现微信小程序文档内容渲染
 - [ ] 开源书籍和文档收录提交入口以及收录管理
@@ -67,26 +67,26 @@ BookStack 配套微信小程序 BookChat API。
     - [ ] 评论审核
     
 - [x] API
-    - [x] 用户登录 - /bookchat/api/v1/user/login
-    - [x] 用户注册 - /bookchat/api/v1/user/register
-    - [x] 找回密码 - /bookchat/api/v1/user/find-password
-    - [x] 修改密码 - /bookchat/api/v1/user/change-password
-    - [x] 用户信息 - /bookchat/api/v1/user/info
-    - [x] 用户收藏 - /bookchat/api/v1/user/star
-    - [x] 用户分享的书籍 - /bookchat/api/v1/user/release-book
-    - [x] 用户粉丝 - /bookchat/api/v1/user/fans
-    - [x] 用户关注 - /bookchat/api/v1/user/follow
-    - [x] 书籍搜索 - /bookchat/api/v1/book/search
-    - [x] 书籍分类 - /bookchat/api/v1/book/categories
-    - [x] 书籍信息 - /bookchat/api/v1/book/info
-    - [x] 书籍内容 - /bookchat/api/v1/book/read
-    - [x] 书籍目录 - /bookchat/api/v1/book/menu
-    - [x] 书籍点评 - /bookchat/api/v1/book/comment
-    - [x] 书籍列表 - /bookchat/api/v1/book/lists
-    - [x] 阅读进度 - /bookchat/api/v1/book/process
-    - [x] 重置阅读进度 - /bookchat/api/v1/book/reset-process
-    - [x] 书籍下载 - /bookchat/api/v1/book/download
-    - [x] 添加/删除书签 - /bookchat/api/v1/book/bookmark
+    - [x] 用户登录 - /shareknow/api/v1/user/login
+    - [x] 用户注册 - /shareknow/api/v1/user/register
+    - [x] 找回密码 - /shareknow/api/v1/user/find-password
+    - [x] 修改密码 - /shareknow/api/v1/user/change-password
+    - [x] 用户信息 - /shareknow/api/v1/user/info
+    - [x] 用户收藏 - /shareknow/api/v1/user/star
+    - [x] 用户分享的书籍 - /shareknow/api/v1/user/release-book
+    - [x] 用户粉丝 - /shareknow/api/v1/user/fans
+    - [x] 用户关注 - /shareknow/api/v1/user/follow
+    - [x] 书籍搜索 - /shareknow/api/v1/book/search
+    - [x] 书籍分类 - /shareknow/api/v1/book/categories
+    - [x] 书籍信息 - /shareknow/api/v1/book/info
+    - [x] 书籍内容 - /shareknow/api/v1/book/read
+    - [x] 书籍目录 - /shareknow/api/v1/book/menu
+    - [x] 书籍点评 - /shareknow/api/v1/book/comment
+    - [x] 书籍列表 - /shareknow/api/v1/book/lists
+    - [x] 阅读进度 - /shareknow/api/v1/book/process
+    - [x] 重置阅读进度 - /shareknow/api/v1/book/reset-process
+    - [x] 书籍下载 - /shareknow/api/v1/book/download
+    - [x] 添加/删除书签 - /shareknow/api/v1/book/bookmark
     - [x] 首页横幅
     
 **后期改造：微信小程序404 页面不允许回退，使用redirect进行跳转。在404页面，增加一个返回首页的按钮**

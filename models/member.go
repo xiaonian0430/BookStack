@@ -10,8 +10,9 @@ import (
 
 	ldap "gopkg.in/ldap.v2"
 
-	"BookStack/conf"
-	"BookStack/utils"
+	"ShareKnow/conf"
+	"ShareKnow/utils"
+
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"

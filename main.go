@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"os"
 
-	"BookStack/utils"
+	"ShareKnow/utils"
 
-	"BookStack/commands"
-	"BookStack/commands/daemon"
-	_ "BookStack/routers"
+	"ShareKnow/commands"
+	"ShareKnow/commands/daemon"
+	_ "ShareKnow/routers"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/kardianos/service"

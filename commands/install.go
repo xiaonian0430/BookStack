@@ -6,8 +6,9 @@ import (
 	"strings"
 	"time"
 
-	"BookStack/conf"
-	"BookStack/models"
+	"ShareKnow/conf"
+	"ShareKnow/models"
+
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 )

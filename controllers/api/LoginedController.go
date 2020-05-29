@@ -8,12 +8,12 @@ import (
 	"strings"
 	"time"
 
-	"BookStack/models/store"
-	"BookStack/utils"
+	"ShareKnow/models/store"
+	"ShareKnow/utils"
 
 	"github.com/astaxie/beego"
 
-	"BookStack/models"
+	"ShareKnow/models"
 )
 
 // 登录之后才能调用的接口放这里

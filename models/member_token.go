@@ -3,7 +3,7 @@ package models
 import (
 	"time"
 
-	"BookStack/conf"
+	"ShareKnow/conf"
 	"github.com/astaxie/beego/orm"
 )
 

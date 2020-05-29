@@ -9,10 +9,10 @@ import (
 
 	"fmt"
 
-	"BookStack/conf"
-	"BookStack/models"
-	"BookStack/oauth"
-	"BookStack/utils"
+	"ShareKnow/conf"
+	"ShareKnow/models"
+	"ShareKnow/oauth"
+	"ShareKnow/utils"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/cache"

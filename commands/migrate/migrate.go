@@ -20,7 +20,8 @@ import (
 	"fmt"
 	"log"
 
-	"BookStack/models"
+	"ShareKnow/models"
+
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 )

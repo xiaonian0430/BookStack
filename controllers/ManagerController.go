@@ -18,11 +18,11 @@ import (
 
 	"os"
 
-	"BookStack/commands"
-	"BookStack/conf"
-	"BookStack/models"
-	"BookStack/models/store"
-	"BookStack/utils"
+	"ShareKnow/commands"
+	"ShareKnow/conf"
+	"ShareKnow/models"
+	"ShareKnow/models/store"
+	"ShareKnow/utils"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"

@@ -1,7 +1,8 @@
 package routers
 
 import (
-	"BookStack/controllers"
+	"ShareKnow/controllers"
+
 	"github.com/astaxie/beego"
 )
 

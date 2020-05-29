@@ -12,10 +12,11 @@ import (
 	"encoding/json"
 	"log"
 
-	"BookStack/commands/migrate"
-	"BookStack/conf"
-	"BookStack/models"
-	"BookStack/utils"
+	"ShareKnow/commands/migrate"
+	"ShareKnow/conf"
+	"ShareKnow/models"
+	"ShareKnow/utils"
+
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"

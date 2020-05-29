@@ -11,17 +11,17 @@ import (
 
 	"github.com/xiaonian0430/html2json/html2json"
 
-	"BookStack/oauth"
+	"ShareKnow/oauth"
 
-	"BookStack/conf"
+	"ShareKnow/conf"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/unknwon/com"
 	"github.com/xiaonian0430/gotil/cryptil"
 	"github.com/xiaonian0430/gotil/util"
 
-	"BookStack/models"
-	"BookStack/utils"
+	"ShareKnow/models"
+	"ShareKnow/utils"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"

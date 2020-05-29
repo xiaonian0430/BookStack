@@ -3,7 +3,8 @@ package controllers
 import (
 	"strings"
 
-	"BookStack/models"
+	"ShareKnow/models"
+
 	"github.com/astaxie/beego"
 )
 

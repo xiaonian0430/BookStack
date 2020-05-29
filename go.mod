@@ -1,4 +1,4 @@
-module github.com/xiaonian0430/BookStack
+module github.com/xiaonian0430/ShareKnow
 
 go 1.23
 

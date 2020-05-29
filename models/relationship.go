@@ -3,7 +3,7 @@ package models
 import (
 	"errors"
 
-	"BookStack/conf"
+	"ShareKnow/conf"
 
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"

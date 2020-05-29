@@ -12,7 +12,7 @@ import (
 	"reflect"
 	"sync"
 
-	"BookStack/utils/html2md"
+	"ShareKnow/utils/html2md"
 
 	"github.com/mssola/user_agent"
 
@@ -25,8 +25,8 @@ import (
 
 	html1 "html/template"
 
-	"BookStack/conf"
-	"BookStack/models/store"
+	"ShareKnow/conf"
+	"ShareKnow/models/store"
 	"github.com/xiaonian0430/html2article"
 	"github.com/alexcesaro/mail/mailer"
 

@@ -13,9 +13,9 @@ import (
 
 	"github.com/astaxie/beego/orm"
 
-	"BookStack/utils"
+	"ShareKnow/utils"
 
-	"BookStack/models"
+	"ShareKnow/models"
 
 	"github.com/astaxie/beego"
 )
