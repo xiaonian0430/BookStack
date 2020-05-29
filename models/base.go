@@ -11,7 +11,7 @@ import (
 
 	"net/url"
 
-	"github.com/TruthHun/gotil/sitemap"
+	"github.com/xiaonian0430/gotil/sitemap"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 )

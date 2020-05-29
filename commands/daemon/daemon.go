@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/TruthHun/BookStack/models"
+	"BookStack/models"
 
-	"github.com/TruthHun/BookStack/commands"
-	"github.com/TruthHun/BookStack/controllers"
+	"BookStack/commands"
+	"BookStack/controllers"
 	"github.com/astaxie/beego"
 	"github.com/kardianos/service"
 )

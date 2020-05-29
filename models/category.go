@@ -4,8 +4,8 @@ import (
 	"github.com/astaxie/beego"
 	"strings"
 
-	"github.com/TruthHun/BookStack/models/store"
-	"github.com/TruthHun/BookStack/utils"
+	"BookStack/models/store"
+	"BookStack/utils"
 
 	"errors"
 

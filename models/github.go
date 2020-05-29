@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/TruthHun/BookStack/oauth"
+	"BookStack/oauth"
 	"github.com/astaxie/beego/orm"
 )
 

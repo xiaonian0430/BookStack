@@ -3,9 +3,9 @@ package controllers
 import (
 	"math"
 
-	"github.com/TruthHun/BookStack/conf"
-	"github.com/TruthHun/BookStack/models"
-	"github.com/TruthHun/BookStack/utils"
+	"BookStack/conf"
+	"BookStack/models"
+	"BookStack/utils"
 	"github.com/astaxie/beego"
 )
 

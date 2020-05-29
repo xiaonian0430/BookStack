@@ -5,7 +5,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/TruthHun/BookStack/conf"
+	"BookStack/conf"
 	"github.com/astaxie/beego/orm"
 )
 

@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/TruthHun/BookStack/models"
+	"BookStack/models"
 	"github.com/astaxie/beego"
 )
 

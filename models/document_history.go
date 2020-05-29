@@ -3,7 +3,7 @@ package models
 import (
 	"time"
 
-	"github.com/TruthHun/BookStack/conf"
+	"BookStack/conf"
 	"github.com/astaxie/beego/orm"
 )
 

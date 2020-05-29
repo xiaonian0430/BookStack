@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-MAINTAINER "TruthHun <TruthHun@QQ.COM>"
+MAINTAINER "XiaoNian <xiaonian0430@163.COM>"
 
 # 安装依赖
 RUN apt update -y \

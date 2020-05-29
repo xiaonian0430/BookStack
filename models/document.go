@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/TruthHun/gotil/mdtil"
+	"github.com/xiaonian0430/gotil/mdtil"
 
 	"bytes"
 	"fmt"
@@ -19,12 +19,12 @@ import (
 	"errors"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/TruthHun/BookStack/conf"
-	"github.com/TruthHun/BookStack/models/store"
-	"github.com/TruthHun/BookStack/utils"
-	"github.com/TruthHun/converter/converter"
-	"github.com/TruthHun/gotil/cryptil"
-	"github.com/TruthHun/gotil/util"
+	"BookStack/conf"
+	"BookStack/models/store"
+	"BookStack/utils"
+	"github.com/xiaonian0430/converter/converter"
+	"github.com/xiaonian0430/gotil/cryptil"
+	"github.com/xiaonian0430/gotil/util"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/httplib"
 	"github.com/astaxie/beego/orm"

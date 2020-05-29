@@ -3,8 +3,8 @@ package controllers
 import (
 	"errors"
 
-	"github.com/TruthHun/BookStack/conf"
-	"github.com/TruthHun/BookStack/models"
+	"BookStack/conf"
+	"BookStack/models"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
 )

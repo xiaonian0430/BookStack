@@ -7,15 +7,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/TruthHun/BookStack/graphics"
-	"github.com/TruthHun/BookStack/models/store"
+	"BookStack/graphics"
+	"BookStack/models/store"
 
 	"fmt"
 
-	"github.com/TruthHun/BookStack/commands"
-	"github.com/TruthHun/BookStack/conf"
-	"github.com/TruthHun/BookStack/models"
-	"github.com/TruthHun/BookStack/utils"
+	"BookStack/commands"
+	"BookStack/conf"
+	"BookStack/models"
+	"BookStack/utils"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"

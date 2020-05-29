@@ -10,9 +10,9 @@ import (
 
 	"strconv"
 
-	"github.com/TruthHun/BookStack/conf"
-	"github.com/TruthHun/BookStack/models/store"
-	"github.com/TruthHun/BookStack/utils"
+	"BookStack/conf"
+	"BookStack/models/store"
+	"BookStack/utils"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"

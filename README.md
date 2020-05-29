@@ -1,3 +1,20 @@
+## goproxy.io
+```
+go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.io,direct
+
+# 设置不走 proxy 的私有仓库，多个用逗号相隔（可选）
+go env -w GOPRIVATE=*.corp.example.com
+
+# 设置不走 proxy 的私有组织（可选）
+go env -w GOPRIVATE=example.com/org_name
+
+erifying github.com/xiaonian0430/gotil@v1.0.1/go.mod: checksum mismatch
+go.sum:     h1:0V5BlPJa24R0PzuXVURUfjaQ8Z7cmqsVSW7ftuhesN0=
+
+解决办法
+删除go.sum,然后重新生成， go mod tidy 即可
+```
 
 ## 打包
 

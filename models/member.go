@@ -10,8 +10,8 @@ import (
 
 	ldap "gopkg.in/ldap.v2"
 
-	"github.com/TruthHun/BookStack/conf"
-	"github.com/TruthHun/BookStack/utils"
+	"BookStack/conf"
+	"BookStack/utils"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"

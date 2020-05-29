@@ -4,11 +4,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/TruthHun/BookStack/utils"
+	"BookStack/utils"
 
-	"github.com/TruthHun/BookStack/commands"
-	"github.com/TruthHun/BookStack/commands/daemon"
-	_ "github.com/TruthHun/BookStack/routers"
+	"BookStack/commands"
+	"BookStack/commands/daemon"
+	_ "BookStack/routers"
+
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/kardianos/service"
 )

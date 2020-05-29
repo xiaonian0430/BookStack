@@ -7,8 +7,8 @@ import (
 
 	"strings"
 
-	"github.com/TruthHun/BookStack/conf"
-	"github.com/TruthHun/BookStack/utils"
+	"BookStack/conf"
+	"BookStack/utils"
 	"github.com/astaxie/beego/orm"
 )
 

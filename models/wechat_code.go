@@ -6,9 +6,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/TruthHun/BookStack/models/store"
+	"BookStack/models/store"
 
-	"github.com/TruthHun/BookStack/utils"
+	"BookStack/utils"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 )

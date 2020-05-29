@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/TruthHun/BookStack/conf"
+	"BookStack/conf"
 	"github.com/astaxie/beego"
 )
 

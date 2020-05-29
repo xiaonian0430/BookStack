@@ -8,7 +8,7 @@ import (
 
 	"github.com/astaxie/beego"
 
-	"github.com/TruthHun/gotil/cryptil"
+	"github.com/xiaonian0430/gotil/cryptil"
 	"github.com/astaxie/beego/orm"
 )
 

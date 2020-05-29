@@ -9,18 +9,20 @@ import (
 	"strings"
 	"time"
 
-	"github.com/TruthHun/html2json/html2json"
+	"github.com/xiaonian0430/html2json/html2json"
 
-	"github.com/TruthHun/BookStack/oauth"
+	"BookStack/oauth"
+
+	"BookStack/conf"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/TruthHun/BookStack/conf"
-	"github.com/TruthHun/gotil/cryptil"
-	"github.com/TruthHun/gotil/util"
 	"github.com/unknwon/com"
+	"github.com/xiaonian0430/gotil/cryptil"
+	"github.com/xiaonian0430/gotil/util"
 
-	"github.com/TruthHun/BookStack/models"
-	"github.com/TruthHun/BookStack/utils"
+	"BookStack/models"
+	"BookStack/utils"
+
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 )
@@ -887,9 +889,9 @@ func (this *CommonController) handleReleaseV1(release string, bookIdentify strin
 			return true
 		})
 
-		hasImage := false
+		// hasImage := false
 		query.Find("img").Each(func(i int, contentSelection *goquery.Selection) {
-			hasImage = true
+			// hasImage = true
 			if src, ok := contentSelection.Attr("src"); ok {
 				contentSelection.SetAttr("src", this.completeLink(src))
 			}

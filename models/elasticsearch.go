@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/TruthHun/BookStack/utils"
+	"BookStack/utils"
 
 	"github.com/PuerkitoBio/goquery"
 
@@ -17,7 +17,7 @@ import (
 
 	"fmt"
 
-	"github.com/TruthHun/gotil/util"
+	"github.com/xiaonian0430/gotil/util"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/httplib"
 	"github.com/astaxie/beego/orm"

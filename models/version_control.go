@@ -10,8 +10,8 @@ import (
 
 	"github.com/astaxie/beego"
 
-	"github.com/TruthHun/BookStack/models/store"
-	"github.com/TruthHun/BookStack/utils"
+	"BookStack/models/store"
+	"BookStack/utils"
 )
 
 // 版本控制，文件存储于获取

@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"github.com/TruthHun/BookStack/controllers"
+	"BookStack/controllers"
 	"github.com/astaxie/beego"
 )
 

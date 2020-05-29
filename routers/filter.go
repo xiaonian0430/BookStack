@@ -3,10 +3,10 @@ package routers
 import (
 	"encoding/json"
 
-	"github.com/TruthHun/BookStack/utils"
+	"BookStack/utils"
 
-	"github.com/TruthHun/BookStack/conf"
-	"github.com/TruthHun/BookStack/models"
+	"BookStack/conf"
+	"BookStack/models"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/context"
 )

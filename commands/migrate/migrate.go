@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/TruthHun/BookStack/models"
+	"BookStack/models"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 )

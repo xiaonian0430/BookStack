@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/TruthHun/BookStack/utils"
+	"BookStack/utils"
 	"strings"
 
 	"github.com/astaxie/beego"

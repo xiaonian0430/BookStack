@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"unicode/utf8"
 
-	"github.com/TruthHun/BookStack/utils"
+	"BookStack/utils"
 
 	"encoding/json"
 	"io"
@@ -20,8 +20,8 @@ import (
 	"errors"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/TruthHun/BookStack/conf"
-	"github.com/TruthHun/BookStack/models"
+	"BookStack/conf"
+	"BookStack/models"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 )

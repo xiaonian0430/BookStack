@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/TruthHun/BookStack/utils/html2md"
+	"BookStack/utils/html2md"
 
 	"image/png"
 
@@ -21,11 +21,11 @@ import (
 	"fmt"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/TruthHun/BookStack/commands"
-	"github.com/TruthHun/BookStack/conf"
-	"github.com/TruthHun/BookStack/models"
-	"github.com/TruthHun/BookStack/models/store"
-	"github.com/TruthHun/BookStack/utils"
+	"BookStack/commands"
+	"BookStack/conf"
+	"BookStack/models"
+	"BookStack/models/store"
+	"BookStack/utils"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	"github.com/boombuler/barcode"

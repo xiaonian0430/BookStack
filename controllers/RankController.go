@@ -1,6 +1,6 @@
 package controllers
 
-import "github.com/TruthHun/BookStack/models"
+import "BookStack/models"
 
 type RankController struct {
 	BaseController

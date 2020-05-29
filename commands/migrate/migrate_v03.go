@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/TruthHun/BookStack/models"
+	"BookStack/models"
 	"github.com/astaxie/beego/orm"
 )
 

@@ -9,10 +9,11 @@ import (
 
 	"fmt"
 
-	"github.com/TruthHun/BookStack/conf"
-	"github.com/TruthHun/BookStack/models"
-	"github.com/TruthHun/BookStack/oauth"
-	"github.com/TruthHun/BookStack/utils"
+	"BookStack/conf"
+	"BookStack/models"
+	"BookStack/oauth"
+	"BookStack/utils"
+
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/cache"
 	"github.com/astaxie/beego/orm"

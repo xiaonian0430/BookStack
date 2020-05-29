@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/TruthHun/BookStack/conf"
+	"BookStack/conf"
 	"github.com/astaxie/beego/orm"
 	"strings"
 	"sync"
