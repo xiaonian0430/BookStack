@@ -15,15 +15,15 @@ RUN apt update -y \
 ENV LANG en_US.utf8
 
 # 将程序拷贝进去
-COPY . /www/BookStack/
+COPY . /www/ShareKnow/
 
 # 将程序拷贝进去
 COPY lib/time/zoneinfo.zip /usr/local/go/lib/time/
 
-RUN chmod 0777 -R /www/BookStack/
+RUN chmod 0777 -R /www/ShareKnow/
 
-WORKDIR /www/BookStack/
+WORKDIR /www/ShareKnow/
 
-RUN ./BookStack install
+RUN ./ShareKnow install
 
-CMD [ "./BookStack" ]
+CMD [ "./ShareKnow" ]

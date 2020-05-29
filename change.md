@@ -67,7 +67,7 @@
 
 
 ## v2.5 升级日志
-- [x] 适配手机APP `BookChatApp` 相关API接口调整
+- [x] 适配手机APP `ShareKnowApp` 相关API接口调整
 - [x] `$auto-title`自动提取内容标题
 - [x] 增加是否开放注册的功能
 - [x] 增加是否允许游客访问的功能（禁止游客访问的话，只能登录）
@@ -148,7 +148,7 @@
 
 - [x] 微信小程序API接口开发
 - [x] 书籍在发布的时候，把非站内图片自动采集下来
-- [x] `BookStack` 配套微信小程序 `BookChat` API接口实现，累计20+个API接口
+- [x] `ShareKnow` 配套微信小程序 `ShareKnowApp` API接口实现，累计20+个API接口
 - [x] 修复删除项目时误删默认封面的bug
 - [x] HTML内容处理，以兼容微信小程序`rich-text`组件实现微信小程序文档内容渲染
 - [x] 开源书籍和文档收录提交入口以及收录管理
@@ -186,7 +186,7 @@
 
 - [x] 使用`puppeteer`采集的支持（需要安装node以及在当前程序目录下安装node的puppeteer模块）
 - [x] 根据邮箱找回密码
-- [x] `<bookstack-split></bookstack-split>`，文档拆分功能
+- [x] `<ShareKnow-split></ShareKnow-split>`，文档拆分功能
 - [x] 文章二维码，扫一扫，手机阅读
 - [x] 文档采集功能优化
     - [x] 增加HTML标签排除功能：`<exclude></exclude>`，如要排除标签`h5`以及class为`hello`、id为"book"的HTML内容，写法是`<exclude>h5,.hello,#book</exclude>`
@@ -213,13 +213,13 @@
 - [x] HTML table 渲染问题优化（把`editormd.js`中的`breaks`设置为false）
 
 ```
-sudo docker run -it -p 9300:9300 -p 9200:9200 --restart always -v /Users/TruthHun/elasticsearch/data:/usr/share/elasticsearch/data -v /Users/TruthHun/elasticsearch/config:/usr/share/elasticsearch/config --name bookstack-search truthhun/elasticsearch:6.2.4.ik
-sudo docker run -it -p 9300:9300 -p 9200:9200 -v /Users/TruthHun/elasticsearch/data:/usr/share/elasticsearch/data --name bookstack-search truthhun/elasticsearch:6.2.4.ik
+sudo docker run -it -p 9300:9300 -p 9200:9200 --restart always -v /Users/TruthHun/elasticsearch/data:/usr/share/elasticsearch/data -v /Users/TruthHun/elasticsearch/config:/usr/share/elasticsearch/config --name ShareKnow-search truthhun/elasticsearch:6.2.4.ik
+sudo docker run -it -p 9300:9300 -p 9200:9200 -v /Users/TruthHun/elasticsearch/data:/usr/share/elasticsearch/data --name ShareKnow-search truthhun/elasticsearch:6.2.4.ik
 ```
 
 ## V1.5 升级日志
 - [x] 修复：文档项目删除时间过长进而导致删除失败的Bug（启用了MySQL的事务，但事务中SQL语句有select字句查询造成的问题）
-- [x] 修复：项目成员列表显示不全的Bug(分页问题导致) [#25](https://github.com/TruthHun/BookStack/issues/25)
+- [x] 修复：项目成员列表显示不全的Bug(分页问题导致) [#25](https://github.com/TruthHun/ShareKnow/issues/25)
 - [x] 修复：文档项目标识正则匹配规则不正确的问题
 - [x] 优化：分类在筛选文档项目的时候，SEO优化，以文档分类作为`title`等，不再以首页的文案作为`title`
 - [x] 优化：一键采集文档项目，自动检测并下载图片
@@ -240,11 +240,11 @@ sudo docker run -it -p 9300:9300 -p 9200:9200 -v /Users/TruthHun/elasticsearch/d
     - [x] 章节目录跟随阅读进度定位位置
 - [x] 新增：版本控制(在)
     - [x] 文档编辑历史，使用文件存储的方式进行记录，不存入数据库.
-    - [x] 版本控制，在`<bookstack-git></bookstack-git>`标签内添加文案用以提交版本说明。如`<bookstack-git>first commit</bookstack-git>`等同于`git commit -m "first commit"`
+    - [x] 版本控制，在`<ShareKnow-git></ShareKnow-git>`标签内添加文案用以提交版本说明。如`<ShareKnow-git>first commit</ShareKnow-git>`等同于`git commit -m "first commit"`
     - [x] 删除版本记录的时候要同时删除版本文件
     - [x] 删除文档项目时同时删除项目所有的相关文档章节版本记录
     - [x] 删除单个文档章节以及删除上一级文档章节，则被删除的文档章节的历史版本记录同样要删除
-- [x] `SUMMARY.md`功能扩展，输入`<bookstack-auto></bookstack-auto>`，获取所有文档章节标识
+- [x] `SUMMARY.md`功能扩展，输入`<ShareKnow-auto></ShareKnow-auto>`，获取所有文档章节标识
     
     
 
@@ -255,15 +255,15 @@ sudo docker run -it -p 9300:9300 -p 9200:9200 -v /Users/TruthHun/elasticsearch/d
 - [x] 修复：采集内容，URL链接和图片链接补全不正确
 - [x] 优化：书籍离线文档生成加锁优化，移除`app.conf`中的`GenerateInterval`配置项
 - [x] 优化：PDF、epub和mobi等电子书生成工具 [Converter](https://github.com/TruthHun/converter)，在生成电子书时，自动生成封面。
-- [x] 优化：`<bookstack-summary>`标签的一键排序和批量创建文档的功能。
+- [x] 优化：`<ShareKnow-summary>`标签的一键排序和批量创建文档的功能。
 - [x] 移除：生成PDF的时候，移除HTML中的Markdown TOC。
-- [x] 新增：提供`Dockerfile`，让部署程序更快更简单。在下载`BookStack`程序的时候，请下载Docker版，压缩包内含有`Dockerfile`文件。
+- [x] 新增：提供`Dockerfile`，让部署程序更快更简单。在下载`ShareKnow`程序的时候，请下载Docker版，压缩包内含有`Dockerfile`文件。
 - [x] 新增：爬虫一键采集功能，采集整理书籍，一步到位！
 
 
 ---------
 
-本次更新，新增了数据表初始数据，旧版本用户，直接执行`./BookStack install`操作，对数据库表进行升级（不会影响原有表数据和结构）。
+本次更新，新增了数据表初始数据，旧版本用户，直接执行`./ShareKnow install`操作，对数据库表进行升级（不会影响原有表数据和结构）。
 
 
 
@@ -274,7 +274,7 @@ sudo docker run -it -p 9300:9300 -p 9200:9200 -v /Users/TruthHun/elasticsearch/d
 - [x] 新增：书籍详情页和文档内容页增加分享功能（由于百度分享等现有分享代码不支持`https`，所以使用本地化百度分享源码解决方案 <https://github.com/hrwhisper/baiduShare> ）
 - [x] 新增：使用KaTeX（ <https://github.com/Khan/KaTeX> ），扩展对数学公式的支持
 - [x] 优化：更新HTML转markdown工具[html2md](https://github.com/TruthHun/html2md)，强化转化效果
-- [x] 修复：文档内URL链接大小写问题优化 [issue#20](https://github.com/TruthHun/BookStack/issues/20)
+- [x] 修复：文档内URL链接大小写问题优化 [issue#20](https://github.com/TruthHun/ShareKnow/issues/20)
 - [x] 修复：友链唯一索引问题(默认的字段varchar类型长度(255)过长，导致部分MySQL数据库无法生成唯一索引)
 - [x] 修复：文档内容更新了，执行发布文档操作的时候，文档更新部分的内容仍然不显示的问题
 
@@ -306,7 +306,7 @@ FIX:
 - [x] 一键导入和一键拉取markdown项目时，如果出现相同identity的文档，则执行更新，否则为新录入
 - [x] 一键拉取项目，支持任何来源的zip压缩的markdown项目的拉取
 - [x] 无刷新加载上下篇阅读文档，优化阅读体验
-- [x] 移除SEO等Go文件中硬编码的"bookstack.cn"的域名(因为BookStack，一开始是打算自用的，所以当时写死了)
+- [x] 移除SEO等Go文件中硬编码的"ShareKnow.cn"的域名(因为ShareKnow，一开始是打算自用的，所以当时写死了)
 - [x] 登录和注册验证码优化（使用Beego自带的验证码体系：<https://github.com/astaxie/beego/tree/master/utils/captcha）>
 - [x] 支持本地化存储（改动了很多地方，具体改动，请`git log`查看）。在app.conf中增加了`store_type`配置项，以扩展存储类型，目前扩展的存储类型有本地存储(`local`)和阿里云OSS存储(`oss`)，更多存储类型(`七牛云存储(qiniu)、腾讯云存储(cos)、百度云存储(bos)、又拍云存储(upyun)`)持续开发中.
 - [x] 分页优化

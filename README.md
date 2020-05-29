@@ -28,6 +28,11 @@ bee pack -be GOOS=linux
 bee pack -be GOOS=windows
 ```
 
+打包成 Mac 命令 
+```
+bee pack -be GOOS=darwin
+```
+
 ## 使用
 ### 01.安装中文字体（非必须，但是建议安装）
 有的Linux服务器并没有支持中文字体，需要手动安装。 地址：http://www.hc-cms.com/thread-41-1-1.html
