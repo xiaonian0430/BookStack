@@ -106,12 +106,12 @@ oauth.conf
 
 执行数据库安装。程序安装一些站点配置项、SEO项等:
 ```
-./BookStack install
+./ShareKnow install
 ```
 
 启动：
 ```
-./BookStack
+./ShareKnow
 ```
 
 ### 07.Nginx反向代理配置参考：
@@ -120,9 +120,9 @@ oauth.conf
 server
 {
     listen 80;
-    server_name demo.bookstack.cn;
+    server_name demo.sk.showcm.top;
     index index.php index.html index.htm default.php default.htm default.html;
-    root /www/wwwroot/demo.bookstack.cn;
+    root /www/wwwroot/demo.sk.showcm.top;
     location / 
     {
         proxy_pass http://localhost:8100;
@@ -154,7 +154,7 @@ server
     include enable-php-54.conf;
     #PHP-INFO-END
     #REWRITE-START URL重写规则引用,修改后将导致面板设置的伪静态规则失效
-    include /www/server/panel/vhost/rewrite/demo.bookstack.cn.conf;
+    include /www/server/panel/vhost/rewrite/demo.sk.showcm.top.conf;
     #REWRITE-END
     #禁止访问的文件或目录
     location ~ ^/(\.user.ini|\.htaccess|\.git|\.svn|\.project|LICENSE|README.md)
@@ -173,9 +173,9 @@ yum install -y supervisor
 cd /etc/supervisor/conf.d/
 ```
 
-2、配置守护进程 创建bookstack.ini文件，并配置。
+2、配置守护进程 创建 shareknow.ini文件，并配置。
 ```
-[program:BookStack]
+[program:ShareKnow]
 directory = 你的程序目录
 command =你的程序执行命令
 autostart = true
@@ -186,14 +186,14 @@ stdout_logfile = 日志地址
 ```
 配置示例：
 ```
-[program:BookStack]
-directory = /home/BookStack
-command =/home/BookStack/BookStack
+[program:ShareKnow]
+directory = /home/ShareKnow
+command =/home/ShareKnow/ShareKnow
 autostart = true
 autorestart=true
 user = root
 redirect_stderr = true
-stdout_logfile = /var/log/supervisor/BookStack.log
+stdout_logfile = /var/log/supervisor/ShareKnow.log
 ```
 
 配置完成之后，重启supervisor
@@ -208,13 +208,13 @@ supervisorctl reload
 supervisorctl status
 
 # 启动某个进程
-supervisorctl start BookStack
+supervisorctl start ShareKnow
 
 # 停止某个进程
-supervisorctl stop BookStack
+supervisorctl stop ShareKnow
 
 # 重启某个进程
-supervisorctl restart BookStack
+supervisorctl restart ShareKnow
 
 
 # error: <class 'socket.error'>, [Errno 2] No such file or directory: file: /usr/lib64/python2.7/socket.py line: 224
@@ -239,16 +239,16 @@ admin admin  或者 admin admin888
 
 
 ## 正文
-**BookStack 配套手机APP `BookChatApp` 开源地址**
+**ShareKnow 配套手机APP `ShareKnowApp` 开源地址**
 
-- GitHub: https://github.com/xiaonian0430/BookChatApp
+- GitHub: https://github.com/xiaonian0430/ShareKnowApp
 
 **BookChatApp下载体验地址**
 
-- https://www.bookstack.cn/app
+- https://www.ShareKnow.cn/app
 
 目录：
-- [BookStack简介](#intro)
+- [ShareKnow简介](#intro)
     - [开源](#open)
     - [QQ交流群](#qqgroup)
     - [站点](#site)
@@ -274,11 +274,11 @@ admin admin  或者 admin admin888
 
     
 <a name="intro"></a>
-# BookStack 简介
+# ShareKnow 简介
 
-BookStack，分享知识，共享智慧！知识，因分享，传承久远！
+ShareKnow ，分享知识，共享智慧！知识，因分享，传承久远！
 
-BookStack是基于[Mindoc](https://github.com/lifei6671/mindoc)开发的，为运营而生。
+ShareKnow 是基于[Mindoc](https://github.com/lifei6671/mindoc)开发的，为运营而生。
 
 在开发的过程中，增加和移除了一些东西，目前已经不兼容MinDoc了（毕竟数据表结构、字段、索引都有了一些不同），同时只支持markdown编辑器。
 
@@ -291,22 +291,22 @@ BookStack是基于[Mindoc](https://github.com/lifei6671/mindoc)开发的，为�
 
 后来学了Go语言，又在无意间遇到了[Mindoc](https://github.com/lifei6671/mindoc)，然后我们公司([掘金量化](https://www.myquant.cn) )也恰巧让我开发公司官网和文档系统，然后我就对[Mindoc](https://github.com/lifei6671/mindoc)做了二次开发。
 
-本来是不想开源的，因为自己写代码的时候，写着写着，代码改来改去，然后代码就乱七八糟了，怕开源出来丢人现眼。但是踏入IT行业三年多时间以来，自身也受益于各种开源项目和开源组件，所以最终还是决定将BookStack开源出来。
+本来是不想开源的，因为自己写代码的时候，写着写着，代码改来改去，然后代码就乱七八糟了，怕开源出来丢人现眼。但是踏入IT行业三年多时间以来，自身也受益于各种开源项目和开源组件，所以最终还是决定将 ShareKnow 开源出来。
 
 其中肯定还是有不足的地方，大家在使用的过程中，遇到问题，欢迎反馈。
 
 源码托管：
-- Gitee: https://gitee.com/xiaonian0430/BookStack
+- Gitee: https://gitee.com/xiaonian0430/ShareKnow
 
 <a name="qqgroup"></a>
 ## QQ交流群
-为方便相互学习和交流，建了个QQ群，加群请备注`来自BookStack`
+为方便相互学习和交流，建了个QQ群，加群请备注`来自 ShareKnow`
 
 > QQ交流群：457803862(猿军团)
 
 同时要说明的是，该群是一个学习交流群，如果是程序相关问题，请直接提交issues，不接受邮件求助、微信求助和QQ私信求助
 
-BookStack 安装使用手册：[https://www.bookstack.cn/books/help](https://www.bookstack.cn/books/help)
+ShareKnow 安装使用手册：[https://www.ShareKnow.cn/books/help](https://www.ShareKnow.cn/books/help)
 
 
 <a name="site"></a>
@@ -320,14 +320,14 @@ BookStack 安装使用手册：[https://www.bookstack.cn/books/help](https://www
 <a name="normal"></a>
 ### 正式站点
 
-**书栈网**：[https://www.bookstack.cn](https://www.bookstack.cn)
+**书栈网**：[https://www.ShareKnow.cn](https://www.ShareKnow.cn)
 
 
 
 <a name="upgrade"></a>
 ## 更新、维护和升级
 
-- 程序下载与升级日志，看这里--> [Release](/truthhun/BookStack/releases)
+- 程序下载与升级日志，看这里--> [Release](/truthhun/ShareKnow/releases)
 
 <a name="func"></a>
 ## 功能与亮点
@@ -361,7 +361,7 @@ BookStack 安装使用手册：[https://www.bookstack.cn/books/help](https://www
 ### 生成和导出PDF、epub、mobi等离线文档
 这个需要安装和配置calibre。
 我将calibre的使用专门封装成了一个工具，并编译成了二进制，源码、程序和使用说地址：[https://github.com/TruthHun/converter](https://github.com/TruthHun/converter)
-在BookStack中，已经引入这个包了。使用的时候，点击"生成下载文档"即可
+在ShareKnow中，已经引入这个包了。使用的时候，点击"生成下载文档"即可
 
 <a name="sort"></a>
 ### 文档排序和批量创建文档
@@ -371,7 +371,7 @@ BookStack 安装使用手册：[https://www.bookstack.cn/books/help](https://www
 - 在文档中，填充无序列表的markdown内容，如：
 
 ```markdown
-<bookstack-summary></bookstack-summary>
+<ShareKnow-summary></ShareKnow-summary>
 * [第0章. 前言]($ch0.md)
 * [第1章. 修订记录]($ch1.md)
 * [第2章. 如何贡献]($ch2.md)
@@ -386,7 +386,7 @@ BookStack 安装使用手册：[https://www.bookstack.cn/books/help](https://www
 - 然后保存。保存成功之后，程序会帮你创建如"第0章. 前言"，并把文档标识设置为"ch0.md"，同时目录结构还按照你的这个来调整和排序。
 
 注意：
-> 必须要有`<bookstack-summary></bookstack-summary>`，这样是为了告诉程序，我这个`summary.md`的文档，是用来创建文档和对文档进行排序的。当然，排序完成之后，当前页面会刷新一遍，并且把`<bookstack-summary></bookstack-summary>`移除了。有时候，第一次排序并没有排序成功，再添加一次这个标签，程序会自动帮你再排序一次。
+> 必须要有`<ShareKnow-summary></ShareKnow-summary>`，这样是为了告诉程序，我这个`summary.md`的文档，是用来创建文档和对文档进行排序的。当然，排序完成之后，当前页面会刷新一遍，并且把`<ShareKnow-summary></ShareKnow-summary>`移除了。有时候，第一次排序并没有排序成功，再添加一次这个标签，程序会自动帮你再排序一次。
 > 我自己也常用这种方式批量创建文档以及批量修改文档的标题
 
 
@@ -479,7 +479,7 @@ Tips:
 ## 安装与使用
 
 
-为了方便，安装和使用教程，请移步到这里：http://www.bookstack.cn/read/help/Ubuntu.md
+为了方便，安装和使用教程，请移步到这里：http://www.ShareKnow.cn/read/help/Ubuntu.md
 
 > 目前只写了Ubuntu下的安装教程，Windows下的安装和使用教程，暂时没时间
 
@@ -491,7 +491,7 @@ Tips:
 
 > `v1.0`升级到`v1.1`,直接下载对应系统的发行版本，然后根据配置文件的配置提示修改配置文件，然后覆盖升级即可。本次升级，没有改动数据库。
 
-关于二次开发，请看这个issue [README.md中能否添源码编译说明](https://github.com/TruthHun/BookStack/issues/3)
+关于二次开发，请看这个issue [README.md中能否添源码编译说明](https://github.com/TruthHun/ShareKnow/issues/3)
 
 
 <a name="aboutme"></a>
@@ -502,7 +502,7 @@ Tips:
 <a name="support"></a>
 ## 赞助我
 如果我的努力值得你的肯定，请赞助我，让我在开源的路上，做更好，走更远。
-赞助我的方式包括：`支付宝打赏`、`微信打赏`、`给BookStack一个star`、`向我反馈意见和建议`
+赞助我的方式包括：`支付宝打赏`、`微信打赏`、`给ShareKnow一个star`、`向我反馈意见和建议`
 
 
 <a name="alipay"></a>
