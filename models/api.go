@@ -15,7 +15,7 @@ var (
 )
 
 func initAPI() {
-	staticDomain = strings.TrimRight(beego.AppConfig.DefaultString("static_domain", "https://static.bookstack.cn/"), "/") + "/"
+	staticDomain = strings.TrimRight(beego.AppConfig.DefaultString("static_domain", "https://static.sk.showcm.top/"), "/") + "/"
 	if strings.ToLower(utils.StoreType) == utils.StoreOss {
 		staticDomain = strings.TrimRight(beego.AppConfig.String("oss::Domain"), "/ ") + "/"
 	}

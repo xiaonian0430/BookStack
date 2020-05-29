@@ -27,8 +27,9 @@ import (
 
 	"ShareKnow/conf"
 	"ShareKnow/models/store"
-	"github.com/xiaonian0430/html2article"
+
 	"github.com/alexcesaro/mail/mailer"
+	"github.com/xiaonian0430/html2article"
 
 	"net/http"
 	"net/mail"
@@ -41,9 +42,9 @@ import (
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/xiaonian0430/gotil/util"
 	"github.com/astaxie/beego"
 	"github.com/huichen/sego"
+	"github.com/xiaonian0430/gotil/util"
 
 	"github.com/xiaonian0430/gotil/cryptil"
 )
@@ -82,7 +83,7 @@ func init() {
 }
 
 func PrintInfo() {
-	fmt.Println("Service: ", "BookStack")
+	fmt.Println("Service: ", "ShareKnow")
 	if Version != unknown {
 		fmt.Println("Version: ", Version)
 	}
@@ -157,7 +158,7 @@ func SendMail(conf *conf.SmtpConf, subject, email string, body string) error {
 //渲染markdown为html并录入数据库
 func RenderDocumentById(id int) {
 	//使用chromium-browser
-	//	chromium-browser --headless --disable-gpu --screenshot --no-sandbox --window-size=320,480 http://www.bookstack.cn
+	//	chromium-browser --headless --disable-gpu --screenshot --no-sandbox --window-size=320,480 http://sk.showcm.top
 	link := "http://localhost:" + beego.AppConfig.DefaultString("httpport", "8181") + "/local-render?id=" + strconv.Itoa(id)
 	name := beego.AppConfig.DefaultString("chrome", "chromium-browser")
 	args := []string{"--headless", "--disable-gpu", "--screenshot", "--no-sandbox", "--window-size=320,480", link}
@@ -230,7 +231,7 @@ func RenderCoverByBookIdentify(identify string) (err error) {
 	}
 
 	//使用chromium-browser
-	//	chromium-browser --headless --disable-gpu --screenshot --no-sandbox --window-size=320,480 http://www.bookstack.cn
+	//	chromium-browser --headless --disable-gpu --screenshot --no-sandbox --window-size=320,480 http://sk.showcm.top
 	link := "http://localhost:" + beego.AppConfig.DefaultString("httpport", "8181") + "/local-render-cover?id=" + identify
 	name := "node"
 	if ok := beego.AppConfig.DefaultBool("puppeteer", false); ok {
@@ -255,7 +256,7 @@ func RenderCoverByBookIdentify(identify string) (err error) {
 
 //使用chrome采集网页HTML
 func CrawlByChrome(urlStr string, bookIdentify string) (cont string, err error) {
-	if strings.Contains(strings.ToLower(urlStr), "bookstack") {
+	if strings.Contains(strings.ToLower(urlStr), "shareknow") {
 		return
 	}
 	var (
@@ -399,7 +400,7 @@ func CrawlHtml2Markdown(urlstr string, contType int, force bool, intelligence in
 
 	imageMap := make(map[string]string)
 
-	if strings.Contains(urlstr, "bookstack.cn") {
+	if strings.Contains(urlstr, "sk.showcm.top") {
 		return
 	}
 

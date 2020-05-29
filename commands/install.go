@@ -77,11 +77,11 @@ func initialization() {
 		book.Editor = "markdown"
 		book.Theme = "default"
 		//设置默认时间，因为beego的orm好像无法设置datetime的默认值
-		defaultTime, _ := time.Parse("2020-01-02 15:04:05", "2020-01-02 15:04:05")
+		defaultTime, _ := time.Parse("2006-01-02 15:04:05", "2006-01-02 15:04:05")
 		book.LastClickGenerate = defaultTime
 		book.GenerateTime = defaultTime
 		//book.ReleaseTime = defaultTime
-		book.ReleaseTime, _ = time.Parse("2020-01-02 15:04:05", "2000-01-02 15:04:05")
+		book.ReleaseTime, _ = time.Parse("2006-01-02 15:04:05", "2000-01-02 15:04:05")
 		book.Score = 40
 
 		if err := book.Insert(); err != nil {

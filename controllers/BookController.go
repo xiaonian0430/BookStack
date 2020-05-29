@@ -14,9 +14,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/PuerkitoBio/goquery"
 	"ShareKnow/graphics"
 	"ShareKnow/models/store"
+
+	"github.com/PuerkitoBio/goquery"
 	"github.com/russross/blackfriday"
 
 	"ShareKnow/commands"
@@ -24,13 +25,14 @@ import (
 	"ShareKnow/models"
 	"ShareKnow/utils"
 	"ShareKnow/utils/html2md"
+
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/logs"
+	"github.com/astaxie/beego/orm"
 	"github.com/xiaonian0430/gotil/filetil"
 	"github.com/xiaonian0430/gotil/mdtil"
 	"github.com/xiaonian0430/gotil/util"
 	"github.com/xiaonian0430/gotil/ziptil"
-	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/logs"
-	"github.com/astaxie/beego/orm"
 )
 
 type BookController struct {

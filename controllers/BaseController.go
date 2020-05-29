@@ -19,9 +19,10 @@ import (
 
 	"errors"
 
-	"github.com/PuerkitoBio/goquery"
 	"ShareKnow/conf"
 	"ShareKnow/models"
+
+	"github.com/PuerkitoBio/goquery"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 )
@@ -317,7 +318,7 @@ func (this *BaseController) loginByMemberId(memberId int) (err error) {
 	return err
 }
 
-//在markdown头部加上<bookstack></bookstack>或者<bookstack/>，即解析markdown中的ul>li>a链接作为目录
+//在markdown头部加上<shareknow></shareknow>或者<shareknow/>，即解析markdown中的ul>li>a链接作为目录
 func (this *BaseController) sortBySummary(bookIdentify, htmlStr string, bookId int) string {
 	debug := beego.AppConfig.String("runmod") != "prod"
 	o := orm.NewOrm()
