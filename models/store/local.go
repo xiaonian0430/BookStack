@@ -42,7 +42,7 @@ func (this *Local) MoveToStore(tmpfile, save string) (err error) {
 	return
 }
 
-//从OSS中删除文件
+//删除文件
 //@param           object                     文件对象
 //@param           IsPreview                  是否是预览的OSS
 func (this *Local) DelFiles(object ...string) error {

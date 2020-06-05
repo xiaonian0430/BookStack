@@ -51,7 +51,7 @@ func initialization() {
 	if err == orm.ErrNoRows {
 		member.Account = "admin"
 		member.Avatar = beego.AppConfig.String("avatar")
-		member.Password = "admin888"
+		member.Password = "123456"
 		member.AuthMethod = "local"
 		member.Nickname = "管理员"
 		member.Role = 0
